@@ -16,15 +16,9 @@ public class AccessTokenScopeAttribute : AuthorizeAttribute
 [Route("[controller]")]
 public class WeatherForecastController : ControllerBase
 {
-    [AccessTokenScope("")]
-    [HttpPost("api")]
-    public void Api()
+    [Authorize("")]
+    [HttpPost("api2")]
+    public void Api2()
     {
     }
- 
-    // [AuthorizeAttribute("")]
-    // [HttpPost("api2")]
-    // public void Api2()
-    // {
-    // }
 }
